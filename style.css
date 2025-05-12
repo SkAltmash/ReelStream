@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: black;
+}
+nav{
+    background-image: url(imges/navimg.png);
+    height: 110px;
+}
+nav h3 {
+   
+   color: #eee;
+   font-size: 2rem;
+   margin-left: 20px;
+
+}
+
+form{
+    text-align: center;
+}
+form input{
+    border: none;
+    width:50vw;
+    margin-top: 30px;
+    height: 40px;
+    font-size: 1.2rem;
+    padding-left: 20px;
+    outline: none;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background: #eee
+    ;
+}
+
+form button{
+    height: 40px;
+    font-size: 1.2rem;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: none;
+    outline: none;
+    width:5%;
+    margin-left: -4px;
+}
+.image-container{
+    margin: 20px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.image-container img{
+    width: 200px;
+    height: 250px;
+}
+.image-container .imageDiv{
+
+ border: 1px solid black;
+ width:200px ;
+ height: 300px;
+ background-color: rgba(0, 0, 0, 0.104);
+ color: white;
+ 
+}
+
+.movename
+{
+    width: 100%;
+    height: 20px;
+}
+.imageDiv span{
+    width: 200px;
+    margin-left: 2px;
+}
+.loadMore{
+    display: none;
+}
+.displyloadMore{
+    display: block;
+}
+
+.button-wrapper {
+    text-align: center;
+    display: flex;
+   justify-content: center;
+}
+  
+  .load-more-btn {
+    position: relative;
+    padding: 15px 40px;
+    background: #d00000;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+  
+  .load-more-btn::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,0,0,0.4) 0%, transparent 70%);
+    animation: pulse 2s infinite;
+    z-index: 0;
+  }
+  
+  .load-more-btn:hover {
+    background: #ff1e1e;
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.9);
+  }
+  
+  .load-more-btn .btn-text {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .loader {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    border: 3px solid #fff;
+    border-top: 3px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+  
+  @keyframes spin {
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+  }
+  
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.6; }
+    50% { transform: scale(1.3); opacity: 0.2; }
+  }
+  
+
+  @media only screen and (max-width:600px) {
+     
+    body{
+        background-color: #eee;
+    }
+    nav h3{
+        margin-left: 10px;
+        font-size: 3rem;
+    }
+  
+  }
