@@ -22,7 +22,7 @@ form.addEventListener('submit',(e)=>{
 
 async function omdb(query,pageNumber) {
    try{
-    const request = await fetch(`https://www.omdbapi.com/?s=${query}&page=${pageNumber}&apikey=79522b75`)
+    const request = await fetch(`https://www.omdbapi.com/?s=${query}&page=${pageNumber}&apikey=6aadbd47`)
     const data = await request.json();
    
     data.Search.forEach(moves => {
@@ -48,7 +48,7 @@ async function omdb(query,pageNumber) {
      
   });
    } catch (error) {
-    const request = await fetch(`https://www.omdbapi.com/?t=${query}&page=${pageNumber}&apikey=79522b75`)
+    const request = await fetch(`https://www.omdbapi.com/?t=${query}&page=${pageNumber}&apikey=6aadbd47`)
     const data = await request.json();
     const imageelement = document.createElement('div');
     imageelement.classList.add('imageDiv');
@@ -86,7 +86,7 @@ function loadmore(){
   
  async function moredetles(imdbID,Title){
   let Seasons = 1;
- const request = await fetch(`https://www.omdbapi.com/?i=${imdbID}&apikey=79522b75`);
+ const request = await fetch(`https://www.omdbapi.com/?i=${imdbID}&apikey=6aadbd47`);
  const data = await request.json();
  moreinfo.style.background=`linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, 1)),url(${data.Poster})`;
  moreinfo.style.backgroundSize = "cover";
@@ -144,7 +144,7 @@ function closeMoreinfofn() {
 
 
 async function totalseson(imdbID,Seasons,totalSeasons){
-  const request = await fetch(`https://www.omdbapi.com/?i=${imdbID}&apikey=79522b75&Season=${Seasons}`);
+  const request = await fetch(`https://www.omdbapi.com/?i=${imdbID}&apikey=6aadbd47&Season=${Seasons}`);
   const data = await request.json()
   const moreinfoInfo = document.querySelector(".moreinfoInfo");
   const scontenar =document.createElement('div');
@@ -171,7 +171,7 @@ async function totalseson(imdbID,Seasons,totalSeasons){
 
 
    async function totalep(imdbID){
-  const request = await fetch(`https://www.omdbapi.com/?i=${imdbID}&apikey=79522b75`);
+  const request = await fetch(`https://www.omdbapi.com/?i=${imdbID}&apikey=6aadbd47`);
    const data = await request.json()
    let epdiv = document.createElement('div');
    epdiv.innerHTML=`<img src ="${data.Poster}"/>`
@@ -185,7 +185,7 @@ async function totalseson(imdbID,Seasons,totalSeasons){
     epcontaner.appendChild(epdiv);
 }
 async function nextseson(imdbID,Seasons,totalSeasons,){
-  const request = await fetch(`https://www.omdbapi.com/?i=${imdbID}&apikey=79522b75&Season=${Seasons}`);
+  const request = await fetch(`https://www.omdbapi.com/?i=${imdbID}&apikey=6aadbd47&Season=${Seasons}`);
   const data = await request.json()
   const moreinfoInfo = document.querySelector(".moreinfoInfo");
  
